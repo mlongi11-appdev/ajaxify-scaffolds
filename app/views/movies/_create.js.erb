@@ -1,9 +1,13 @@
-var created_movie = $("<%= j(render @movie) %>");
+var created_movie = $("<%= j(render 'movies/card') %>");
 
 created_movie.hide();
 
-$("new_movie_form").after(created_movie);
+$("#new_movie_form").after(created_movie);
 
 created_movie.fadeIn(200);
 
-$("new_movie_form #comment_body").val("");
+$("#new_movie_form #movie_title ").val("");
+$("#new_movie_form #movie_description ").val("");
+$("#new_movie_form #movie_duration ").val("");
+$("#new_movie_form #movie_image ").val("");
+$("#new_movie_form #movie_year ").val("");
