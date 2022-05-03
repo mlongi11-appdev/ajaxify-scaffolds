@@ -2,27 +2,27 @@
 
 <h1>Movies</h1>
 
+<div class="row row-cols-4">
 <% @movies.each do |movie| %>
-  <div class="card" style="width: 18rem;">
+  <div class="card mb-2 mr-1">
     <div class="card-body">
       <h5 class="card-title"><%= movie.title %></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Directed by <%= movie.director_id %></h6>
+      <h6 class="card-subtitle mb-2 text-muted">Directed by <%= movie.director.name %></h6>
       <h6 class="card-subtitle mb-2 text-muted">Duration <%= movie.duration %></h6>
       <h6 class="card-subtitle mb-2 text-muted">Released in <%= movie.year %></h6>
       <p class="card-text"><%= movie.description %></p>
-      <div class="card-link">
+    </div>
+      <div class="card-footer">
         <%= link_to 'Destroy', movie, 
             method: :delete,
             remote: true, 
             data: { confirm: 'Are you sure?' } 
             %>
+        <%= link_to 'Show', movie %>
       </div>
-      <div class="card-link">
-        <%= link_to 'Show', movie %></td>
-      </div>
-    </div>
   </div>
   <% end %>
+</div>
 
 <br>
 
