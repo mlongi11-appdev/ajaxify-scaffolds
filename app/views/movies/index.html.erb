@@ -3,6 +3,18 @@
 <h1>Movies</h1>
 
 <div class="row row-cols-4">
+  <div id="placeholder_new_movie" class="card mb-2 mr-1">
+    <div class="card-body">
+      <h5 class="card-title">New movie title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Directed by DIRECTOR</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Duration DURATION</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Released in YEAR</h6>
+      <p class="card-text">DESCRIPTION</p>
+    </div>
+    <div class="card-footer">
+        <p class="button">Create Movie</p>
+      </div>
+  </div>
 <% @movies.each do |movie| %>
   <div id="<%= dom_id(movie) %>" class="card mb-2 mr-1">
     <div class="card-body">

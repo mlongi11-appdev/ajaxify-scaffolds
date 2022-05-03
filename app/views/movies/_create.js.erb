@@ -1,0 +1,9 @@
+var created_movie = $("<%= j(render @movie) %>");
+
+created_movie.hide();
+
+$("new_movie_form").after(created_movie);
+
+created_movie.fadeIn(200);
+
+$("new_movie_form #comment_body").val("");
