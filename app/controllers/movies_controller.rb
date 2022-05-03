@@ -54,7 +54,7 @@ class MoviesController < ApplicationController
       format.html { redirect_to movies_url, notice: "Movie was successfully destroyed." }
       format.json { head :no_content }
       format.js do
-        render template: "movies/destroy.js.erb"
+        render template: "movies/_destroy.js.erb"
       end
     end
   end
