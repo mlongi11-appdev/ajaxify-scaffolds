@@ -1,5 +1,15 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: %i[ show edit update destroy ]
+  before_action :set_movie, only: %i[ 
+    show 
+    edit 
+    update 
+    destroy 
+    edit_title
+    edit_duration
+    edit_year
+    edit_description
+    edit_director_id
+  ]
 
   # GET /movies or /movies.json
   def index
@@ -17,6 +27,46 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+  end
+
+  def edit_title
+    respond_to do |format|
+      format.js do
+        render template: "movies/_edit_title.js.erb"
+      end
+    end
+  end
+
+  def edit_duration
+    respond_to do |format|
+      format.js do
+        render template: "movies/_edit_duration.js.erb"
+      end
+    end
+  end
+
+  def edit_year
+    respond_to do |format|
+      format.js do
+        render template: "movies/_edit_year.js.erb"
+      end
+    end
+  end
+
+  def edit_description
+    respond_to do |format|
+      format.js do
+        render template: "movies/_edit_description.js.erb"
+      end
+    end
+  end
+
+  def edit_director_id
+    respond_to do |format|
+      format.js do
+        render template: "movies/_edit_director_id.js.erb"
+      end
+    end
   end
 
   # POST /movies or /movies.json
