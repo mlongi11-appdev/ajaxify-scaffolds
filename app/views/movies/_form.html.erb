@@ -37,6 +37,7 @@
   </div>
 
   <div class="field">
+    <%= form.label :director_id%>
     <%= form.collection_select :director_id, Director.order(:name),:id, :name %>
   </div>
 

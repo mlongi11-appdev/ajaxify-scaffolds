@@ -11,7 +11,7 @@
   <% @movies.each do |movie| %>
       <div id="<%= dom_id(movie) %>" class="card mb-2 mr-1">
     <div class="card-body">
-      <h5 id="<%= dom_id(movie) %>_title" class="card-title"><%= link_to "#{movie.title}", movie_edit_title_path(movie), remote: true, remote: true %></h5>
+      <h5 id="<%= dom_id(movie) %>_title" class="card-title"><%= link_to "#{movie.title}", movie_edit_title_path(movie), remote: true %></h5>
       <h6 id="<%= dom_id(movie) %>_director"class="card-subtitle mb-2 text-muted">Directed by <%= link_to "#{movie.director.name}", movie_edit_director_id_path(movie), remote: true %></h6>
       <h6 id="<%= dom_id(movie) %>_duration"class="card-subtitle mb-2 text-muted">Duration <%= link_to "#{movie.duration}", movie_edit_duration_path(movie), remote: true %></h6>
       <h6 id="<%= dom_id(movie) %>_year"class="card-subtitle mb-2 text-muted">Released in <%= link_to "#{movie.year}", movie_edit_year_path(movie), remote: true %></h6>
